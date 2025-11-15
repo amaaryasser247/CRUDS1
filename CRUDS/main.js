@@ -65,7 +65,7 @@ submit.onclick = function () {
         clearData();
         showData();
     } else {
-        alert("❌please write the title");
+        alert("please write the product details");
     }
 };
 
@@ -121,7 +121,6 @@ function showData() {
     }else{btnDelete.innerHTML = ""}
 }
 
-//count
 //delete
 function deleteData(i) {
     datapro.splice(i, 1);
