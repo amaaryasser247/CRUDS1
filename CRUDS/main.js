@@ -137,27 +137,22 @@ function DeleteAll() {
     showData();
 }
 //update
-function updateData(i) {
-    title.value = datapro[i].title;
-    price.value = datapro[i].price;
-    taxes.value = datapro[i].taxes;
-    ads.value = datapro[i].ads;
-    discount.value = datapro[i].discount;
-    getTotal();
-    count.style.display = "none";
-    category.value = datapro[i].category;
-    submit.innerHTML = "Update";
-    mood = "update";
-    tmp = i;
-    scroll({top:0, 
-    behavior:"smooth"
-    });
 
-}
 //search
 let searchMood = 'title';
 
-
+function getsearchMood(id) {
+    let search = document.getElementById('search');
+    if (id == 'searchtitle') {
+        searchMood = 'title';
+    } else {
+        searchMood = 'category';
+    }
+    search.placeholder = 'search by ' + searchMood;
+    search.focus();
+    search.value = '';
+    showData();
+}
 function searchdata(value) {
     let table = '';
     for (let i = 0; i < datapro.length; i++) {
