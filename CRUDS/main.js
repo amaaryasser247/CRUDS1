@@ -43,7 +43,7 @@ submit.onclick = function () {
         category: category.value.toLowerCase().trim(),
     };
 
-    // الشرط: لازم يبقى فيه عنوان وسعر وتصنيف
+  
     if (newpro.title !== '' ) {
         if (mood === 'create') {
             if (newpro.count > 1) {
@@ -137,7 +137,23 @@ function DeleteAll() {
     showData();
 }
 //update
+function updateData(i) {
+    title.value = datapro[i].title;
+    price.value = datapro[i].price;
+    taxes.value = datapro[i].taxes;
+    ads.value = datapro[i].ads;
+    discount.value = datapro[i].discount;
+    getTotal();
+    count.style.display = "none";
+    category.value = datapro[i].category;
+    submit.innerHTML = "Update";
+    mood = "update";
+    tmp = i;
+    scroll({top:0, 
+    behavior:"smooth"
+    });
 
+}
 //search
 let searchMood = 'title';
 
