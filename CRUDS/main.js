@@ -157,18 +157,6 @@ function updateData(i) {
 //search
 let searchMood = 'title';
 
-function getsearchMood(id) {
-    let search = document.getElementById('search');
-    if (id == 'searchtitle') {
-        searchMood = 'title';
-    } else {
-        searchMood = 'category';
-    }
-    search.placeholder = 'search by ' + searchMood;
-    search.focus();
-    search.value = '';
-    showData();
-}
 
 function searchdata(value) {
     let table = '';
