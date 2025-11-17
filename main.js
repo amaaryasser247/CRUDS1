@@ -75,7 +75,6 @@ submit.onclick = function () {
     clearData();
     showData();
 
-
 //clear inputs
 function clearData() {
     title.value = "";
