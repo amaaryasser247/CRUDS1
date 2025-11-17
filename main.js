@@ -86,7 +86,6 @@ function clearData() {
     count.value = "";
     category.value = "";
 }
-
 //read
 function showData() {
     let table = "";
