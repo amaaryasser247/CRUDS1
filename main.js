@@ -74,7 +74,6 @@ submit.onclick = function () {
     localStorage.setItem("product",     JSON.stringify(datapro));
     clearData();
     showData();
-
 //clear inputs
 function clearData() {
     title.value = "";
