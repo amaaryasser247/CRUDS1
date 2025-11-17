@@ -69,7 +69,6 @@ submit.onclick = function () {
     }
 };
 
-  
         //save in localstorage
     localStorage.setItem("product",     JSON.stringify(datapro));
     clearData();
